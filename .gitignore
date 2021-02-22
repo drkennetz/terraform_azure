@@ -2,3 +2,4 @@
 .terraform*
 mykey*
 *.tfvars
+*.tfstate*
