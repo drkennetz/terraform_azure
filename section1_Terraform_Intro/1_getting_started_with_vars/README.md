@@ -2,20 +2,20 @@
  - can declare variables with terraform
  - to test to see if things were declared properly, from inside the dir with main.tf type `terraform console`
  - in the terraform console, there are 2 ways to access vars (using this main.tf file)
-   var.myvar
-   "${var.myvar}"
-   both print "hello terraform"
+   - `var.myvar`
+   - `"${var.myvar}"`
+   - both print `"hello terraform"`
  - for the map:
-   var.mymap prints the whole map
-   var.mymap["mykey"] prints the value
+   - `var.mymap` prints the whole map
+   - `var.mymap["mykey"]` prints the value
  - lists:
-   lists are denoted with []
-   list indexing is 0 based
-   var.mylist[0] prints first item
-   can also use functions
-   element(var.mylist, 1)
-   element(var.mylist, 2)
-   slice(var.mylist, 0, 2)
+   - lists are denoted with []
+   - list indexing is 0 based
+   - `var.mylist[0]` prints first item
+   - can also use functions
+   - `element(var.mylist, 1)` # prints the 2nd element
+   - `element(var.mylist, 2)` # prints the 3rd element 
+   - `slice(var.mylist, 0, 2)` # prints elements 0-1 (is not inclusive of upper range, so prints first and second element)
 
 From now on, I am going to use the syntax without the braces and dollar signs.
 
