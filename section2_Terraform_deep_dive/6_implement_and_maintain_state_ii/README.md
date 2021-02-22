@@ -71,7 +71,7 @@ terraform init -backend-config="storage_account_name=tfstorage" \
   - This is often useful if you have outputs that need to be refreshed, or something changed outside terraform and you need to make terraform aware of it without having to run an apply
 
 ## Secrets in your state file IMPORTANT
-- You need to be aware that **secrets can be stored in your state file
+- You need to be aware that **secrets can be stored in your state file**
   - For example, when you create a database, the **initial database password** will be in the state file
 - If you have a **remote state**, then locally it'll **not be stored on disk** (it'll only be kept in memory when you run terraform apply)
   - As a result, storing state remotely can increase security
