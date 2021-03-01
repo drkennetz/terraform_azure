@@ -25,7 +25,7 @@
 
 ## Default NSG Rules from Azure
 - A newly created NSG has these default **inbound rules**:
-[!Default_Inbound_NSG](./Default_Inbound_NSG.PNG)
+![Default_Inbound_NSG](./Default_Inbound_NSG.PNG)
 
 - 2 allow rules
   - The first allow rule has a higher priority than the deny rule, so it will allow all traffic from the virtual network
@@ -34,7 +34,7 @@
   - The last rule is going to deny all ports and all IP's if no higher priority rule is specified
 
 - A newly created NSG has these default **outbound rules**:
-[!Default_Outbound_NSG](./Default_Outbound_NSG.PNG)
+![Default_Outbound_NSG](./Default_Outbound_NSG.PNG)
 - 2 allow rules
   - The first allow rule has a higher priority than the deny rule, so it will allow all traffic to go to the virtual network
   - The second allow rule has a higher priority than the deny rule, so it will allow all traffic to the internet
@@ -46,7 +46,7 @@
   
 ## Our Inbound NSG
 - After applying this NSG to our Azure account, our inbound rules will look like this:
-[!Our_Inbound_NSG](./Our_Inbound_NSG.PNG)
+![Our_Inbound_NSG](./Our_Inbound_NSG.PNG)
 - 3 Allow rules
   - the 2 defaults were applied
   - Our "allow-ssh" rule was applied:
@@ -70,7 +70,7 @@
 - Afterwards you'll be able to use that "MyApplication" within a network security rule, rather than specifying the single IP addresses
 
 ## ASG Diagram
-[!Application_Security_Groups](./Application_Security_Groups.PNG)
+![Application_Security_Groups](./Application_Security_Groups.PNG)
 
 - Let's say you have 3 VMs that are a part of your application
 - You can take the 3 Network Interfaces, put those in an Application Security Group, for example with the name "MyApplication"
@@ -80,7 +80,7 @@
 - With ASG's you bundle those Network Interfaces, and so you only need 1 NSG rule
 
 ## Terraform ASG Diagram
-[!ASG_Terraform](./ASG_Terraform.PNG)
+![ASG_Terraform](./ASG_Terraform.PNG)
 - This diagram shows how it is done in terraform
   - VM 1-3 will have 3 network interfaces (network_interface (1-3))
   - These will have 1 network_security_group to allow traffic to this VM
